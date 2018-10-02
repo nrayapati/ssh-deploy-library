@@ -2,6 +2,8 @@
 
 Jenkins Pipeline Library - A Yaml wrapper on top of ssh-steps-plugin.
 
+More about on this [blog](https://engineering.cerner.com/blog/ssh-steps-for-jenkins-pipeline/)
+
 This is just an example library.
 
 
