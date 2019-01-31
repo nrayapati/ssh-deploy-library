@@ -37,10 +37,11 @@ command_groups:
   c_group_2:
     - gets:
         - from: 'test.sh'
-          to: 'test_new.sh'
+          into: 'test_new.sh'
+          override: true
     - puts:
         - from: 'test.sh'
-          to: '.'
+          into: '.'
     - removes:
         - 'test.sh'
 
