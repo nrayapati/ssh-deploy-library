@@ -29,19 +29,19 @@ def call(yaml, boolean dryRun) {
                 def allRemotes = []
 
                 it.remote_groups.each {
-                    if(!yaml.remotes."$it") {
+                    if(!yaml.remote_groups."$it") {
                         error "remotes groups are empty/invalid for the given stage: ${stageName}, command group: ${it}. Please check yml."
                     }
-                    remoteGroups[it] = yaml.remotes."$it"
+                    remoteGroups[it] = yaml.remote_groups."$it"
                 }
 
                 // Merge all the commands for the given group
                 def commandGroups = [:]
                 it.command_groups.each {
-                    if(!yaml.commands."$it") {
+                    if(!yaml.command_groups."$it") {
                         error "command groups are empty/invalid for the given stage: ${stageName}, command group: ${it}. Please check yml."
                     }
-                    commandGroups[it] = yaml.commands."$it"
+                    commandGroups[it] = yaml.command_groups."$it"
                 }
 
                 def isSudo = false
