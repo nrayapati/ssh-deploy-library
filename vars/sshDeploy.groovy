@@ -5,7 +5,8 @@ def call(String yamlName) {
 }
 
 def call(String yamlName, boolean dryRun) {
-    sshDeploy(yamlName, dryRun)
+    def yaml = readYaml file: yamlName
+    sshDeploy(yaml, dryRun)
 }
 
 def call(yaml, boolean dryRun) {
